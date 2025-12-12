@@ -1,0 +1,104 @@
+:root {
+    --bg: #f8f8f8;
+    --screen-bg: #fff;
+    --number-bg: #e0e0e0;
+    --number-hover: #d5d5d5;
+    --operator-bg: #b0b0b0;
+    --operator-hover: #999;
+    --equal-bg: #4a4a4a;
+    --equal-hover: #2e2e2e;
+    --clear-bg: #d9534f;
+    --clear-hover: #c9302c;
+    --backspace-bg: #f0ad4e;
+    --backspace-hover: #ec971f;
+    --text-color: #333;
+    --operator-text: #fff;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(#efefef, #ffffff, #e5e5e5);
+}
+.calculator {
+    background-color: var(--bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 320px;
+    text-align: center;
+}
+.calculator h2 {
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+    font-size: 1.5em;
+}
+.display {
+    width: 100%;
+    height: 80px;
+    font-size: 2em;
+    background-color: var(--screen-bg);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    text-align: right;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    overflow-x: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: font-size 0.1s ease;
+    color: var(--text-color);
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+button {
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button.number {
+    background-color: var(--number-bg);
+    color: var(--text-color);
+}
+button.number:hover {
+    background-color: var(--number-hover);
+}
+button.operator {
+    background-color: var(--operator-bg);
+    color: var(--operator-text);
+}
+button.operator:hover {
+    background-color: var(--operator-hover);
+}
+button.equal {
+    background-color: var(--equal-bg);
+    color: var(--operator-text);
+    grid-column: span 2;
+}
+button.equal:hover {
+    background-color: var(--equal-hover);
+}
+button#clear {
+    background-color: var(--clear-bg);
+    color: var(--operator-text);
+}
+button#clear:hover {
+    background-color: var(--clear-hover);
+}
+button#backspace {
+    background-color: var(--backspace-bg);
+    color: var(--operator-text);
+}
+button#backspace:hover {
+    background-color: var(--backspace-hover);
+}
